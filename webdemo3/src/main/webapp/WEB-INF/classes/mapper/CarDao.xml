@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="com.springmvc.dao.CarDao">
+	<!-- 目的：为dao接口方法提供sql语句配置 -->
+	
+	<select id="getCarBook" resultType="com.springmvc.entity.Car" parameterType="int">
+		<!-- 具体的sql -->
+		SELECT * FROM	car
+		where uid=#{uid}
+	</select>
+
+	<insert id="insertCarVal">
+		insert into car(bid,cname,cprice,num,total,cpicture,uid)
+		values(#{b.bid},#{b.bname},#{b.bprices},1,#{b.bprices},#{b.bpicture},#{uid})
+	</insert>
+
+	<select id="isContainBook" resultType="com.springmvc.entity.Car">
+		select * from car
+		where bid=#{bid} and uid=#{uid}
+	</select>
+	
+	<select id="selnum" resultType="int">
+	select num from car 
+	where uid=#{uid} and bid=#{bid}
+	</select>
+	
+	<update id="updnum" >
+	update car set num=num+#{dnum} where bid=#{bid} and uid=#{uid}
+	</update>
+	
+	<update id="updtotal">
+	update car set total=num*cprice where bid=#{bid} and uid=#{uid}
+	</update>
+	
+	<select id="selsnum" resultType="int" >
+	select IFNULL(sum(num),0) as num from car where uid=#{uid} 
+	</select>
+	
+	<delete id="delebook">
+	delete from car where uid=#{uid} and bid=#{bid}
+	</delete>
+	
+	<delete id="clearcar">
+	delete from car where uid=#{uid}
+	</delete>
+</mapper>

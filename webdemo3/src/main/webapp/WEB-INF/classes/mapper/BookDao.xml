@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="com.springmvc.dao.BookDao">
+	<!-- 目的：为dao接口方法提供sql语句配置 -->
+	
+	<select id="getBook" resultType="com.springmvc.entity.book">
+	select * from books
+	</select>
+	
+	<select id="getbook" resultType="com.springmvc.entity.book">
+	select * from books  where bid=#{bid}
+	</select>
+	
+	<delete id="deteleBook">
+	delete from books where bid=#{bid}
+	</delete>
+	
+	<insert id="insertBook">
+	insert into books (bname,bauthor,bpublisher,bprices,bpicture,bnice,bcount) values(#{bname},#{bauthor},#{bpublisher},#{bprices},#{bpicture},#{bnice},#{bcount})
+	</insert>
+	
+	<update id="updatenum">
+	update books set bcount=bcount-#{num} where bid=#{bid}
+	</update>
+	
+	<update id="updatenum1">
+	update books set bcount=bcount+#{num} where bid=#{bid}
+	</update>
+	
+	<select id="selectbook" resultType="com.springmvc.entity.book">
+	select * from books where bname like "%"#{bookname}"%"  limit #{current},#{everyPage}
+	</select>
+	
+	<select id="getNiceBook" resultType="com.springmvc.entity.book">
+	select * from books where bnice='yes'
+	</select>
+	
+	<select id="selectbooknum" resultType="int">
+	select sum(bid) from books 
+	</select>
+	
+	<select id="findAll" resultType="com.springmvc.entity.book"> 
+	select * from books where bname like "%"#{chaxun}"%"
+	</select>
+</mapper>

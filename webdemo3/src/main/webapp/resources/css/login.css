@@ -1,0 +1,59 @@
+.up .ppo{background: white;width:320px;height: 330px;margin:20px auto;padding: 20px; }
+.up .ppo a{display:inline-block;width: 321px;height: 50px; text-align: center;line-height: 50px;font-size:18px;color: black;}
+.up .ppo .orange{border-bottom: 4px solid orange;}
+.up .ppo  .myinpiut{width: 280px;height: 35px;margin: 20px; border:1px solid #e0e0e0; text-indent: 30px;}
+.up .ppo  .myinpiut:hover{border:1px solid orange;}
+.up .ppo  .loo{margin-top:0px;}
+.bear{position: relative;}
+.bear .dl{position: absolute;top: 30px;left: 26px;font-size: 20px;}
+.bear .d2{position: absolute;top:83px;left: 26px;font-size: 20px;}
+.up .ppo .review{width: 230px;text-align: right;font-size: 14px; color: gray;}
+.up .ppo .denglu{width: 320px;height: 62px; border-radius: 10px;background: #ff8140;color: white; font-size: 20px;}
+.up .ppo .denglu:hover{background: #f7671d;}
+.up .ppo .recruit{width: 80px;font-size: 15px;color: orange;}
+body{background-color: white;margin:0 auto;}
+nav{height:52px;width:100%;background:white;border-top: 2px solid #FA7D3C;
+    position: fixed;opacity: .8;z-index:999;}
+.jia{height: 52px;width: 100%;}
+nav .mid{width: 1100px;height: 52px;background: white;margin:0 auto;position: relative;}
+.myblog{font-size: 37px;color: red;display: inline-block;}
+.dian span{line-height: 52px;}
+
+.dian i{font-size: 20px;color: black;font-style: normal; position: absolute;top:11px;left: 43px;}
+.navi{position: absolute;left: 288px;top:10px;}
+.navi .dao{width: 200px;height: 30px;
+    broder:1px solid #F2F2F5;
+    text-indent: 10px;}
+.navi .dao:hover{border: 2px solid #FA7D3C;}
+.search a{position: absolute;left: 170px;top:-4px;}
+.search a span{font-size: 30px;}
+.right1{position: absolute; width: 600px; left: 540px;top: 10px; }
+.right1 li{float:left;width: 100px;}
+.right1 li a{font-size: 17px;color:#333;text-decoration:none;}
+.right1  .sd{ top: 25px;width: 50px;text-align: center;padding-top: 5px;}
+.right1 ul .se{ top: 25px;width: 200px;text-align: center;padding-top: 5px;}
+.right1 li a span{font-size: 26px;}
+.right1 li a:hover{color:#FA7D3C;}
+.right1 .small{width: 5px; line-height: 30px;color: gray;}
+.center {width: 1100px;padding-top: 60px;margin: 0 auto;}
+.center table td{width: 200px;height: 70px;font-size: 20px;line-height: 70px;}
+.center table td input{width: 230px;height: 40px;}
+ #b1,#b2,#b3,#b4,#b5,#b6{display: none;width: 300px;}
+.center table .dsubmit{height: 60px;background: orange;}
+
+#topa{width: 100%;height: 60px;background: white;}
+#lunbo{width: 1100px;margin: 0 auto;height:600px;}
+.carousel .carousel-inner .item img{margin: 0 auto; width: 300px;height: 400px;}
+
+.foo{width:260px;height: 300px;background:green; margin:50px 50px 50px 50px;position: relative;overflow: hidden;float: left;background-size: 300px 400px;}
+.foo div{display:inline-block;position: absolute;bottom: -150px; height: 150px;background:white;width:100%; transition: .5s;opacity: .9;
+    font-size: 20px;}
+.foo div a{text-decoration: none;color: orange;}
+.foo:hover{transform:translate3d(0px,-10px,0px);box-shadow: 0px 10px 20px blue;
+    background-size: 260px 300px;}
+.foo:hover div{bottom:0;}
+.mid{width: 1100px;margin:0px auto;}
+.order{margin: 0 auto;}
+.order th{width: 200px;height: 70px;text-align: center;line-height: 50px;}
+.order td{width: 200px;height: 50px;text-align: center;line-height: 50px;}
+.order .red{color: red;}

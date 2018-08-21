@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="com.springmvc.dao.UserDao">
+	<!-- 目的：为dao接口方法提供sql语句配置 -->
+	
+	<select id="checkUser" resultType="com.springmvc.entity.User">
+	select * from users where userName=#{name}
+		
+  
+		    <if test="pwd != null and pwd != ''">
+		        AND userPwd=#{pwd}
+		    </if>
+		    <if test="pwd == null or pwd == ''">
+		        AND userPwd is null
+		    </if>
+		
+	</select>
+	
+	<select id="getUser" resultType="com.springmvc.entity.User">
+	select * from users
+	</select>
+	
+	<insert id="insertData">
+	insert into users(userName,userPwd,tel,address,sex,idcard)  values(#{userName},#{userPwd},#{tel},#{address},#{sex},#{idcard})
+	</insert>
+	
+	<select id="checkuser" resultType="com.springmvc.entity.User" >
+	select * from users where UserName=#{name}
+	</select>
+	
+	<update id="updateUser">
+	update users set userName=#{userName},tel=#{tel},userPwd=#{userPwd},idcard=#{idcard},address=#{address} where uid=#{uid}
+	</update>
+	
+	<select id="getUserById" resultType="com.springmvc.entity.User" >
+	select * from users where uid=#{uid}
+	</select>
+	
+	<delete id="deteleUser">
+	delete from users where uid=#{uid}
+	</delete>
+</mapper>
